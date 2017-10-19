@@ -18,7 +18,17 @@
  * 
  */
 int main(int argc, char** argv) {
+    int numero1, numero2;
+    puts("Indique o seu primeiro numero: ");
+    scanf("%d", &numero1);
+    puts("Indique o seu segundo numero: ");
+    scanf("%d", &numero2);
 
+    if (numero1 > numero2) {
+        printf("O maior numero e: %d\n", numero1);
+    } else {
+        printf("O maior numero e: %d\n", numero2);
+    }
     return (EXIT_SUCCESS);
 }
 
