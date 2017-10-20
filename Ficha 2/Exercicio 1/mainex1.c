@@ -19,6 +19,7 @@
  */
 int main(int argc, char** argv) {
     int numero1, numero2;
+   
     puts("Indique o seu primeiro numero: ");
     scanf("%d", &numero1);
     puts("Indique o seu segundo numero: ");
