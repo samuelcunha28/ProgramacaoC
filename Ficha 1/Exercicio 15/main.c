@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
     tempochegada = (horachegada * 60) + minutoschegada; //converter para minutos
     tempototal = tempochegada - tempopartida;
    
-    puts("A viagem teve uma duração de: "); // converter de minutos para horas e minutos
+    puts("A viagem teve uma duracao de: "); // converter de minutos para horas e minutos
     printf("Horas total: %d\n ", (tempototal / 60)); // tempo total a dividir por 60 minutos (minutos que uma hora tem)
     printf("Minutos total: %d\n", (tempototal % 60)); //resto dos minutos
     
