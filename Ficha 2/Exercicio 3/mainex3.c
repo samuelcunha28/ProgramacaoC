@@ -23,7 +23,7 @@
  */
 int main(int argc, char** argv) {
     float nota1, nota2, nota3, media;
-    
+
     puts("Indique a sua primeira nota. (Vale 25% da media final).");
     scanf("%f", &nota1);
     puts("Indique a sua segunda nota. (Vale 35% da media final).");
@@ -34,13 +34,12 @@ int main(int argc, char** argv) {
     media = (nota1 * media1) + (nota2 * media2) + (nota3 * media3);
 
     printf("A media final das notas e de: %0.1f valores\n", media);
-    
+
     if (media < 9.5) {
         puts("Voce esta reprovado! ");
     } else {
         puts("Parabens voce esta aprovado! ");
     }
-
 
     return (EXIT_SUCCESS);
 }

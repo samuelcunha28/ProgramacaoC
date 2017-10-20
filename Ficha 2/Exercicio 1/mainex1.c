@@ -19,7 +19,7 @@
  */
 int main(int argc, char** argv) {
     int numero1, numero2;
-   
+
     puts("Indique o seu primeiro numero: ");
     scanf("%d", &numero1);
     puts("Indique o seu segundo numero: ");
@@ -30,6 +30,7 @@ int main(int argc, char** argv) {
     } else {
         printf("O maior numero e: %d\n", numero2);
     }
+
     return (EXIT_SUCCESS);
 }
 
