@@ -42,9 +42,9 @@ int main(int argc, char** argv) {
 
     printf("O total de segundos do album e de: %ld\n", tempocancao);
     puts("Convertendo para horas:minutos:segundos da: ");
-    printf("Horas: %d\n", (tempocancao / 3600)); //sendo que uma hora tem 3600 segundos 
-    printf("Minutos: %d\n", (tempocancao % 3600) / 60); //fazendo o resto dos minutos das horas 
-    printf("Segundos: %d\n", tempocancao % 60); //fazendo os segundos que nao cabem num minutos
+    printf("Horas: %d\n", (tempocancao / 3600)); // sendo que uma hora tem 3600 segundos 
+    printf("Minutos: %d\n", (tempocancao % 3600) / 60); // restantes segundos a dividir pelo numero de segundos que um minuto tem
+    printf("Segundos: %d\n", tempocancao % 60); // fazendo os segundos que nao cabem num minuto
 
     return (EXIT_SUCCESS);
 }

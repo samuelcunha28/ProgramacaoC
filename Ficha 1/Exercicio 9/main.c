@@ -19,15 +19,16 @@
  */
 int main(int argc, char** argv) {
     float massa, altura, imc;
-    puts("Introduza a altura da pessoa:");
+    
+    puts("Introduza a altura da pessoa (em metros):");
     scanf("%f", &altura);
     puts("Introduza a massa corporal");
     scanf("%f", &massa);
-    
-        imc = (massa / (altura * altura));
-        
-        printf("O indice de massa corporal e de: %0.2f\n", imc);
-        
+
+    imc = massa / (altura * altura);
+
+    printf("O indice de massa corporal e de: %0.2f\n", imc);
+
     return (EXIT_SUCCESS);
 }
 

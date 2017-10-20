@@ -19,18 +19,18 @@
  */
 int main(int argc, char** argv) {
     int numero1, numero2, subtracao, resultado;
-    
+
     puts("Introduza o seu primeiro numero:");
     scanf("%d", &numero1);
     puts("Introduza o seu segundo numero:");
     scanf("%d", &numero2);
-        
-    subtracao = (numero1 - numero2);
-        printf("A subtracao da: %d\n", subtracao);
-    
-    resultado = (subtracao * numero1);
-        printf("O resultado da subtracao com o primeiro numero e de : %d\n", resultado);
-   
+
+    subtracao = numero1 - numero2;
+    printf("A subtracao da: %d\n", subtracao);
+
+    resultado = subtracao * numero1;
+    printf("O resultado da subtracao com o primeiro numero e de : %d\n", resultado);
+
     return (EXIT_SUCCESS);
 }
 

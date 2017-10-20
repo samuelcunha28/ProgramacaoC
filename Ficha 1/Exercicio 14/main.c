@@ -20,6 +20,7 @@
 int main(int argc, char** argv) {
     int voto1, voto2, voto3, voto4, voto5;
     float totalvotos;
+    
     puts("Apresente quantos votos o primeiro candidato teve: ");
     scanf("%d", &voto1);
     puts("Apresente quantos votos o segundo candidato teve: ");

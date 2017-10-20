@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=ficha_1_exercicio_6
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/ficha_1_exercicio_6
+CND_ARTIFACT_NAME_Debug=exercicio_6
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/exercicio_6
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=ficha1exercicio6.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/ficha1exercicio6.tar
+CND_PACKAGE_NAME_Debug=exercicio6.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/exercicio6.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=ficha_1_exercicio_6
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/ficha_1_exercicio_6
+CND_ARTIFACT_NAME_Release=exercicio_6
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/exercicio_6
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=ficha1exercicio6.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/ficha1exercicio6.tar
+CND_PACKAGE_NAME_Release=exercicio6.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/exercicio6.tar
 #
 # include compiler specific variables
 #

@@ -24,11 +24,11 @@ int main(int argc, char** argv) {
     scanf("%d", &numero1);
     puts("Introduza o seu segundo numero");
     scanf("%d", &numero2);
-    
-    soma = (numero1 + numero2);
-    
+
+    soma = numero1 + numero2;
+
     printf("A soma e de: %d\n", soma);
-    
+
 
     return (EXIT_SUCCESS);
 }

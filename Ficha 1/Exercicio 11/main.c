@@ -21,18 +21,19 @@
 /*
  * 
  */
-int main(int argc, char** argv) { 
+int main(int argc, char** argv) {
     float nota1, nota2, nota3, media;
+    
     puts("Indique a sua primeira nota. (Vale 25% da media final).");
     scanf("%f", &nota1);
     puts("Indique a sua segunda nota. (Vale 35% da media final).");
     scanf("%f", &nota2);
     puts("Indique a sua terceira nota. (Vale 40% da media final).");
     scanf("%f", &nota3);
-    
-        media = ((nota1 * media1) + (nota2 * media2) + (nota3 * media3));
-    
-    printf("A media final das notas e de: %0.1f\n", media);
+
+    media = (nota1 * media1) + (nota2 * media2) + (nota3 * media3);
+
+    printf("A media final das notas e de: %0.1f valores\n", media);
 
     return (EXIT_SUCCESS);
 }

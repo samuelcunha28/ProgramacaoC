@@ -16,19 +16,18 @@
 
 #define velocidadeluz 300000
 
-
 /*
  * 
  */
 int main(int argc, char** argv) {
     double quilometros, tempototal;
+    
     puts("Insira no numero de quilometros:");
     scanf("%lf", &quilometros);
-    
-    tempototal = (quilometros / velocidadeluz);
-    
+
+    tempototal = quilometros / velocidadeluz;
+
     printf("O tempo que levaria a realizar a viagem em anos luz e: %0.6lf\n", tempototal);
-    
 
     return (EXIT_SUCCESS);
 }

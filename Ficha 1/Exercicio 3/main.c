@@ -19,19 +19,18 @@
  */
 int main(int argc, char** argv) {
     int comp, larg, area, perimetro;
-    
+
     puts("Insira o comprimento do retangulo");
     scanf("%d", &comp);
     puts("Insira a largura do retangulo");
     scanf("%d", &larg);
-    
-    area = (comp * larg);
-    perimetro = (comp + comp + larg + larg);
-    
+
+    area = comp * larg;
+    perimetro = comp + comp + larg + larg;
+
     printf("A area do retangulo e de: %d\n", area);
     printf("O perimetro do retangulo e de: %d\n", perimetro);
-    
-    
+
     return (EXIT_SUCCESS);
 }
 

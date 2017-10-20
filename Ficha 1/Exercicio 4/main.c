@@ -25,8 +25,8 @@ int main(int argc, char** argv) {
     puts("Qual e o raio da circunferencia? ");
     scanf("%f", &raio);
     
-    area = (PI * (raio * raio)); /* (sabendo que a area e pi x raio ao quadrado) */
-    perimetro = (2 * PI * raio); /* (sabendo que o perimetro e 2 x pi x raio) */
+    area = PI * raio * raio; // (sabendo que a area e pi x raio ao quadrado) 
+    perimetro = 2 * PI * raio; // (sabendo que o perimetro e 2 x pi x raio) 
     
     printf("A area da circunferencia e de: %0.2f\n", area);
     printf("O perimetro da circunferencia e de: %0.2f\n", perimetro);

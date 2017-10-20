@@ -21,12 +21,12 @@ int main(int argc, char** argv) {
     int numero, antecessor, sucessor;
     puts("Insira o seu numero: ");
     scanf("%d", &numero);
-    
-        antecessor =  (numero - 1);
-        sucessor = (numero + 1);
-        
-        printf("O seu antecessor e: %d\n", antecessor);
-        printf("O seu sucessor e: %d\n", sucessor);
+
+    antecessor = numero - 1;
+    sucessor = numero + 1;
+
+    printf("O seu antecessor e: %d\n", antecessor);
+    printf("O seu sucessor e: %d\n", sucessor);
     return (EXIT_SUCCESS);
 }
 
