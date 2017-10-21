@@ -26,7 +26,6 @@ int main(int argc, char** argv) {
     scanf("%d", &minutos);
     
     if (horas == 12) {
-        horas = 12;
         printf("Convertendo para formato de 12 horas neste momento sao: %d : %d PM\n", horas, minutos);
     }else if (horas > 12){
         horas = horas - 12;
