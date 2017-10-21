@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
     
     puts("Introduza a hora (em formato de 24 horas): ");
     scanf("%d", &horas);
-    puts("Insira os minutos");
+    puts("Agora introduza os minutos");
     scanf("%d", &minutos);
     
     if (horas == 12) {
