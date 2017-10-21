@@ -18,7 +18,16 @@
  * 
  */
 int main(int argc, char** argv) {
-
+    int numero;
+    
+    puts("Introduza o seu numero: ");
+    scanf("%d", &numero);
+    
+    if (numero % 3 == 0 && numero % 5 == 0 ) {
+        puts("O numero e divisivel por 3 e por 5! ");
+    } else {
+        puts("O numero nao e divisivel por 3 e por 5! ");
+    }
     return (EXIT_SUCCESS);
 }
 
