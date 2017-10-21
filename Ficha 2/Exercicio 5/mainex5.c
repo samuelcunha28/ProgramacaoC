@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*void limparBufferEntrada(){ char ch; while ((ch = getchar()) != '\n' && ch != EOF); }*/
+void limparBufferEntrada(){ char ch; while ((ch = getchar()) != '\n' && ch != EOF); }
 /*
  * 
  */
@@ -27,10 +27,10 @@ int main(int argc, char** argv) {
     puts("Introduza o seu segundo numero: ");
     scanf("%f", &numero2);
     
-    // limparBufferEntrada(); 
+    limparBufferEntrada(); 
     
     puts("Qual a operacao que pretende fazer? (+, -, / ou *) ");
-    scanf(" %c", &op); // espaco em branco para ler e ignorar todos os espacos em branco, new lines ou tabs 
+    scanf("%c", &op);
 
     switch (op) {
         case '+': printf("A sua operacao: %.1f + %.1f = %.1f\n ", numero1, numero2, numero1 + numero2);
