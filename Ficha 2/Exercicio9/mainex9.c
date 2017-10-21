@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
     puts("Introduza o seu numero: ");
     scanf("%d", &numero);
     
-    if (numero % 2 == 0) { // a sua divisao por 2 tem que ter resto 0 para ser par 
+    if (numero % 2 == 0) { // a sua divisao por 2 tem que ter resto igual a 0 para ser par 
         puts("O numero que foi introduzido e par");
     } else {
         puts("O numero que foi introduzido e impar");

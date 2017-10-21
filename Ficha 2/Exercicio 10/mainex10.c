@@ -23,8 +23,8 @@ int main(int argc, char** argv) {
     puts("Introduza o seu numero: ");
     scanf("%d", &numero);
     
-    if (numero % 3 == 0 && numero % 5 == 0 ) {
-        puts("O numero e divisivel por 3 e por 5! ");
+    if (numero % 3 == 0 && numero % 5 == 0 ) { // para ser divisivel quer por 3 e por 5 o seu resto tem de ser igual a 0 
+        puts("O numero e divisivel por 3 e por 5! "); 
     } else {
         puts("O numero nao e divisivel por 3 e por 5! ");
     }
