@@ -25,6 +25,9 @@ int main(int argc, char** argv) {
     puts("Agora introduza os minutos");
     scanf("%d", &minutos);
     
+    if (horas > 23 || minutos > 59) {
+        puts("As horas / minutos foram introduzidos incorretamente!!! ");
+    }
     if (horas == 12) {
         printf("Convertendo para formato de 12 horas neste momento sao: %d : %d PM\n", horas, minutos);
     }else if (horas > 12){

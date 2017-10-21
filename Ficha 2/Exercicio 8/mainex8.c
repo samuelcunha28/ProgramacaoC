@@ -29,6 +29,9 @@ int main(int argc, char** argv) {
     puts("Introduza o minuto de saida do empregado: ");
     scanf("%d", &minutosaida);
     
+    if (horaentrada > 23 || minutoentrada > 59 || horasaida > 23 || minutosaida > 59) {
+        puts("As horas / minutos foram introduzidos de forma incorreta!!! ");
+    }
     totalentrada = (horaentrada * 60) + minutoentrada;
     totalsaida = (horasaida * 60) + minutosaida;
     total = totalsaida - totalentrada;
