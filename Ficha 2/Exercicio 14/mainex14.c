@@ -28,13 +28,12 @@ int main(int argc, char** argv) {
     saldofinal = saldoinicial + operacao;
 
     if (operacao > 0 && saldofinal >= 0) {
-        printf("A sua operacao e realizavel (%.1lf + %.1lf = %.1lf ). O saldo final apos o credito e de: %.1lf euros\n ",saldoinicial, operacao, saldofinal, saldofinal);
+        printf("A sua operacao e realizavel (%.1lf + %.1lf = %.1lf ). O saldo final apos o credito e de: %.1lf euros\n ", saldoinicial, operacao, saldofinal, saldofinal);
     } else if (operacao < 0 && saldofinal >= 0) {
-        printf("A sua operacao e realizavel (%.1lf %.1lf = %.1lf ). O saldo final apos o credito e de: %.1lf euros\n ",saldoinicial, operacao, saldofinal, saldofinal);
+        printf("A sua operacao e realizavel (%.1lf %.1lf = %.1lf ). O saldo final apos o credito e de: %.1lf euros\n ", saldoinicial, operacao, saldofinal, saldofinal);
     } else {
         printf("A operacao (%.1lf %.1lf ) e impossivel de realizar devido a saldo insuficiente!\n ", saldoinicial, operacao);
     }
-
 
     return (EXIT_SUCCESS);
 }
