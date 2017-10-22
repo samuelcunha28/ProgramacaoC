@@ -18,21 +18,21 @@
  * 
  */
 int main(int argc, char** argv) {
-    double saldoinicial, operacao, credito, debito, saldofinal = 0;
+    double saldoinicial, operacao, saldofinal = 0;
 
     puts("Introduza o saldo inicial da sua conta: ");
     scanf("%lf", &saldoinicial);
     puts("O que pretende efetuar? (valor positivo para creditar / valor negativo para debitar");
     scanf("%lf", &operacao);
-    
+
     saldofinal = saldoinicial + operacao;
-    
+
     if (operacao > 0 && saldofinal >= 0) {
-        printf("A sua operacao e realizavel. O saldo final apos o credito e de: %.2lf\n ", saldofinal);
-    } else if (operacao < 0 && saldofinal < 0) {
-        puts("A sua operacao e impossivel devido a saldo insuficiente");
+        printf("A sua operacao e realizavel (%.1lf + %.1lf = %.1lf ). O saldo final apos o credito e de: %.1lf euros\n ",saldoinicial, operacao, saldofinal, saldofinal);
+    } else if (operacao < 0 && saldofinal >= 0) {
+        printf("A sua operacao e realizavel (%.1lf %.1lf = %.1lf ). O saldo final apos o credito e de: %.1lf euros\n ",saldoinicial, operacao, saldofinal, saldofinal);
     } else {
-        printf("A sua operacao e realizavel. O saldo final apos o debito e de: %.2lf\n", saldofinal);
+        printf("A operacao (%.1lf %.1lf ) e impossivel de realizar devido a saldo insuficiente!\n ", saldoinicial, operacao);
     }
 
 
