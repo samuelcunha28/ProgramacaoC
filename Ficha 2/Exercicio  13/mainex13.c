@@ -30,15 +30,17 @@ int main(int argc, char** argv) {
     scanf("%d", &temp_pretendida);
 
     if (temp_atual == temp_pretendida) {
-        printf("A temperatura ambiente esta a sua medida!!\n");
+        printf("A temperatura ambiente esta a sua medida!!\n ");
     } else if (temp_atual < temp_pretendida) {
         dif_temp = temp_pretendida - temp_atual; // diferenca das temperaturas
         segundos = dif_temp * aumentot; // calculo dos segundos
-        printf("O tempo necessario para atingir a temperatura pretendida e de %d segundos\n ", segundos);
+        printf("Para atingir a temperatura pretendida temos de aumentar %.1f graus\n ", dif_temp);
+       printf("O tempo necessario para a atingir e de %d segundos\n ", segundos);
     } else {
         dif_temp = temp_atual - temp_pretendida; // diferenca das temperaturas
         segundos = dif_temp * reducaot; // calculo dos segundos
-        printf("O tempo necessario para atingir a temperatura pretendida e de %d segundos\n ", segundos);
+       printf("Para atingir a temperatura pretendida temos de diminuir %.1f graus\n ", dif_temp);
+        printf("O tempo necessario para a atingir e de %d segundos\n ", segundos);
     }
     return (EXIT_SUCCESS);
 }
