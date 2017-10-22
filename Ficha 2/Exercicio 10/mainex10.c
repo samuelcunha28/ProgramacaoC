@@ -24,9 +24,9 @@ int main(int argc, char** argv) {
     scanf("%d", &numero);
     
     if (numero % 3 == 0 && numero % 5 == 0 ) { // para ser divisivel quer por 3 e por 5 o seu resto tem de ser igual a 0 
-        puts("O numero e divisivel por 3 e por 5! "); 
+        puts("O numero e divisivel por 3 e nem por 5!!! "); 
     } else {
-        puts("O numero nao e divisivel por 3 e por 5! ");
+        puts("O numero nao e divisivel por 3 e nem por 5!!! ");
     }
     return (EXIT_SUCCESS);
 }
