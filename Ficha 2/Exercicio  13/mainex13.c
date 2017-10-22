@@ -21,21 +21,22 @@
  * 
  */
 int main(int argc, char** argv) {
-    int tempreal, temppretendida, diftemp, segundos;
+    int temppretendida, segundos;
+    float tempatual, diftemp;
 
-    puts("Indique a temperatura real: ");
-    scanf("%d", &tempreal);
+    puts("Indique a temperatura atual: ");
+    scanf("%f", &tempatual);
     puts("Indique qual a temperatura pretendida: ");
     scanf("%d", &temppretendida);
 
-    if (tempreal == temppretendida) {
+    if (tempatual == temppretendida) {
         printf("A temperatura ambiente esta a sua medida!!\n");
-    } else if (tempreal < temppretendida) {
-        diftemp = temppretendida - tempreal; // diferenca das temperaturas
+    } else if (tempatual < temppretendida) {
+        diftemp = temppretendida - tempatual; // diferenca das temperaturas
         segundos = diftemp * aumentot; // calculo dos segundos
         printf("O tempo necessario para atingir a temperatura pretendida e de %d segundos\n ", segundos);
     } else {
-        diftemp = tempreal - temppretendida; // diferenca das temperaturas
+        diftemp = tempatual - temppretendida; // diferenca das temperaturas
         segundos = diftemp * reducaot; // calculo dos segundos
         printf("O tempo necessario para atingir a temperatura pretendida e de %d segundos\n ", segundos);
     }
