@@ -19,13 +19,14 @@
  */
 int main(int argc, char** argv) {
     int numero, contador = 0;
-    
+
     puts("Introduza o seu numero: ");
     scanf("%d", &numero);
-    
-    for (contador = numero + 1;contador <= numero + 5; ++contador) {
-        printf("Sucessores: %d\n", contador); 
-    } for (contador = numero - 1;contador >= numero - 5; --contador) {
+
+    for (contador = numero + 1; contador <= numero + 5; ++contador) {
+        printf("Sucessores: %d\n", contador);
+    }
+    for (contador = numero - 1; contador >= numero - 5; --contador) {
         printf("Antecessores: %d\n", contador);
     }
     return (EXIT_SUCCESS);
