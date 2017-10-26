@@ -26,8 +26,8 @@ int main(int argc, char** argv) {
     scanf("%d", &salto);
    
     while (limite >= num) {
-        printf("Resultado: %d\n ", num);
-        num = num + salto;       
+        printf("%d ", num);
+        num += salto;       
     }
     
     return (EXIT_SUCCESS);
