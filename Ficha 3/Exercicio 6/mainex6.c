@@ -19,17 +19,17 @@
  */
 int main(int argc, char** argv) {
     int num, limite, salto;
-    
-    puts("Introduza o valor limite: "); 
+
+    puts("Introduza o valor limite: ");
     scanf("%d", &limite);
     puts("Introduza o valor do salto: ");
     scanf("%d", &salto);
-   
+
     while (limite >= num) {
         printf("%d ", num);
-        num += salto;       
+        num += salto;
     }
-    
+
     return (EXIT_SUCCESS);
 }
 
