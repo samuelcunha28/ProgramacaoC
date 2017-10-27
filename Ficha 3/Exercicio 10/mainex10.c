@@ -19,8 +19,7 @@
  */
 int main(int argc, char** argv) {
     int tab, i;
-    
-    
+
     i = 1;
     while (i <= 10) {
         tab = 1;
@@ -30,7 +29,6 @@ int main(int argc, char** argv) {
         }
         i = i + 1;
     }
-
     return (EXIT_SUCCESS);
 }
 
