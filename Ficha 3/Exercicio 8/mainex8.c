@@ -23,9 +23,9 @@ int main(int argc, char** argv) {
     puts("Introduza o seu numero: ");
     scanf("%d", &numero);
 
-    while (contador <= numero - 2) {
-        contador += 2;
+    while (contador <= numero) {
         printf("%d\n", contador);
+        contador += 2;
     }
     return (EXIT_SUCCESS);
 }
