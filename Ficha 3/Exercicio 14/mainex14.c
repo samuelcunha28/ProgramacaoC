@@ -20,11 +20,11 @@
 int main(int argc, char** argv) {
     int candidato1, candidato2, candidato3, candidato4, branco, nulo, voto, contador;
     
-    while (1) {
-        puts("Para votar no candidato 1 pressione a tecla 1 ");
-        puts("Para votar no candidato 2 pressione a tecla 2 ");
-        puts("Para votar no candidato 3 pressione a tecla 3 ");
-        puts("Para votar no candidato 4 pressione a tecla 4 ");
+    while (1) { // enquanto for verdade faz o seguinte
+        puts("Para votar no candidato 1 pressione 1 ");
+        puts("Para votar no candidato 2 pressione 2 ");
+        puts("Para votar no candidato 3 pressione 3 ");
+        puts("Para votar no candidato 4 pressione 4 ");
         puts("Para votar em branco pressione 0 ");
         puts("Para votar nulo pressione 9 ");
         puts("Para concluir pressione -1");
@@ -45,8 +45,7 @@ int main(int argc, char** argv) {
                 ++candidato4;
         } 
             ++contador;
-    }
-        else if (voto == 0){
+    } else if (voto == 0){
             puts("Votou em branco! ");
             ++branco;
             ++contador;
