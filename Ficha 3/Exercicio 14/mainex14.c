@@ -65,8 +65,8 @@ int main(int argc, char** argv) {
     printf("O terceiro candidato teve %d voto(s)\n ", candidato3);
     printf("O quarto candidato teve %d voto(s)\n ", candidato4);
     printf("O primeiro candidato teve %d voto(s)\n ", candidato4);
-    printf("%d votaram em branco\n ", branco);
-    printf("%d votaram nulo\n ", nulo);
+    printf("%d pessoa(s) votaram em branco\n ", branco);
+    printf("%d pessoa(s) votaram nulo\n ", nulo);
     
     puts("-------------PERCENTAGENS---------------------");
     printf("O primeiro candidato teve %.1f%% dos votos\n ", ((float)candidato1 / contador)*100);
