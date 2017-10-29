@@ -75,6 +75,7 @@ int main(int argc, char** argv) {
     printf("O quarto candidato teve %.1f%% dos votos!\n ", ((float)candidato4 / contador)*100);
     printf("A percentagem de votos em branco foi de %.2f%%\n ", ((float)branco / contador)*100);
     printf("A percentagem de votos nulos foi de %.2f%%\n ", ((float)nulo / contador)*100);
+    
     return (EXIT_SUCCESS);
 }
 
