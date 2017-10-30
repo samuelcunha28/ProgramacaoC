@@ -23,8 +23,8 @@ int main(int argc, char** argv) {
     puts("Introduza o seu numero: ");
     scanf("%d", &numero);
 
-    while (contador <= numero) {
-        printf("%d\n", contador);
+    while (contador <= (numero * 2) - 2) {
+        printf("%d ", contador);
         contador += 2;
     }
     return (EXIT_SUCCESS);
