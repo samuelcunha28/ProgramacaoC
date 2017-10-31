@@ -23,7 +23,7 @@ void limparBufferEntrada() {
  * 
  */
 int main(int argc, char** argv) {
-    int idade;
+    int idade, contador, sexom, sexof, casados;
     char sexo, estado_civil;
     double salario;
 
@@ -35,14 +35,17 @@ int main(int argc, char** argv) {
         limparBufferEntrada();
 
         if (idade >= 16 && idade <= 150) {
-            puts("Introduziu a idade: %d ", idade);
+            printf("Introduziu a idade: %d\n ", idade);
+            ++idade;
+            ++contador;
         } else if (idade < 0) {
             puts("Introduziu uma idade negativa, o programa ira encerrar ");
             break;
         } else {
-            puts("Introduziu uma idade fora dos parametros validos! ");
+            puts("Introduziu uma idade fora dos parametros validos! O programa ira encerrar");
+            break;
         }
-        
+
 
         puts("Introduza o seu sexo (M ou F): ");
         scanf("%c", &sexo);
@@ -51,12 +54,17 @@ int main(int argc, char** argv) {
 
         if (sexo == 'M') {
             puts("Introduziu o sexo masculino! ");
+            ++sexom;
+            ++contador;
         } else if (sexo == 'F') {
             puts("Introduziu o sexo feminino! ");
+            ++sexof;
+            ++contador;
         } else {
             puts("Introduziu um sexo invalido! ");
             break;
         }
+
 
         puts("Introduza o seu estado civil (Solteiro - 1, Casado - 2, Divorciado - 3, Viuvo - 4): ");
         scanf("%c", &estado_civil);
@@ -67,6 +75,8 @@ int main(int argc, char** argv) {
             case '1': puts("Introduziu o estado civil solteiro(a) ");
                 break;
             case '2': puts("Introduziu o estado civil casado(a) ");
+                ++casados;
+                ++contador;
                 break;
             case '3': puts("Introduziu o estado civil divorciado(a) ");
                 break;
@@ -76,11 +86,20 @@ int main(int argc, char** argv) {
                 break;
         }
 
+
+
         puts("Introduza o seu salario (maior que o salario nacional): ");
         scanf("%lf", &salario);
-    }
 
-    limparBufferEntrada();
+        if (salario > 580) {
+            printf("Introduziu o salario %.1lf e este e maior que o salario nacional\n ", salario);
+            ++salario;
+            ++contador;
+        } else {
+            puts("Introduziu um salario invalido! ");
+        }
+
+    }
 
     return (EXIT_SUCCESS);
 }
