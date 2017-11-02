@@ -18,7 +18,7 @@
  * 
  */
 int main(int argc, char** argv) {
-    int somatorio, i, numero;
+    int somatorio, i = 0, numero;
 
     while (numero != -1) {
         puts("Introduza o seu numero ( -1 para fazer a media destes ): ");

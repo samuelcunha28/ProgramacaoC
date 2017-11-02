@@ -18,7 +18,7 @@
  * 
  */
 int main(int argc, char** argv) {
-    int numero, i, resto, contadorresto;
+    int numero, i, resto, contadorresto = 0;
 
     puts("Introduza o seu numero para verificacao: ");
     scanf("%d", &numero);
@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
             contadorresto = contadorresto + 1; // exemplo: dividir o numero 5 5 vezes e verificar se e divisivel por 1 e por ele
         }
     }
-    if (contadorresto == 2) { // logo o se for primo o contador do resto de for igual a 2 e primo se nao nao e primo
+    if (contadorresto == 2) { // logo se for primo o contador do resto se for igual a 2 chegamos a conclusao que e primo 
         printf("O numero %d e primo!\n ", numero);
     } else
         printf("O numero %d nao e primo!\n ", numero);

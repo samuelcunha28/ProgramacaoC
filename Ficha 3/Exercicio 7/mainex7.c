@@ -19,15 +19,20 @@
  */
 int main(int argc, char** argv) {
     int numero;
-    
+
     puts("Introduza um numero (este tem que ser positivo): ");
     scanf("%d", &numero);
-    
+
     if (numero <= 0) {
         puts("Introduziu um numero invalido!! ");
-    } else {
+    } else if (numero % 2 == 0) {
         numero = numero - 1;
-        while( numero >= 0) {
+        while (numero >= 0) {
+            printf("%d\n", numero);
+            numero -= 2;
+        }
+    } else {
+        while (numero >= 0) {
             printf("%d\n", numero);
             numero -= 2;
         }

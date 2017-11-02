@@ -18,7 +18,7 @@
  * 
  */
 int main(int argc, char** argv) {
-    int numero, contador;
+    int numero, contador = 0;
 
     puts("Introduza o seu numero: ");
     scanf("%d", &numero);

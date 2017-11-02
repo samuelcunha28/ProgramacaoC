@@ -13,7 +13,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define limite 100
 
 /*
  * 
@@ -21,7 +20,7 @@
 int main(int argc, char** argv) {
     int numero, somatorio = 0;
 
-    for (numero = 1; numero <= limite; ++numero) {
+    for (numero = 1; numero <= 100; ++numero) {
         printf("%d\n", numero);
         somatorio += numero;
     }

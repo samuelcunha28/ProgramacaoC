@@ -24,7 +24,8 @@ int main(int argc, char** argv) {
         puts("Introduza a nota do aluno: ");
         scanf("%d", &nota);
         if (nota >= 0 && nota < 10) {
-            printf("O aluno tirou %d logo esta reprovado\n ", nota);
+            printf("O aluno tirou %d logo esta reprovado. Tem que se esforcar mais\n ", nota);
+            break;
         } else if (nota >= 10 && nota <= 20) {
             printf("O aluno tirou %d logo esta aprovado. Parabens!\n ", nota);
             break;
