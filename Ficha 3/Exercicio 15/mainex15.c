@@ -25,7 +25,7 @@ void limparBufferEntrada() {
  * 
  */
 int main(int argc, char** argv) {
-    int idade, i, estado_civil, contador = 1, casados, f_sal1500, m_18_35_casado, sexom, sexof, idademaior = 0, idademenor = 0;
+    int idade, i, estado_civil, contador = 1, casados, f_sal1500, m_18_35_casado, sexom, sexof, idademaior = 0, idademenor = 150;
     char sexo;
     double salario, contador_salario, contador_salariofinal;
 
@@ -103,13 +103,8 @@ int main(int argc, char** argv) {
 
         if (idade > idademaior) {
             idademaior = idade;
-        } else if (idade < idademenor) {
-            idademenor = idade;
-        }
-
-        if (idade < idademaior) {
-            idademaior = idade;
-        } else if (idade > idademenor) {
+        }  
+        if (idade < idademenor) {
             idademenor = idade;
         }
         // feminino com salario ate 1500
