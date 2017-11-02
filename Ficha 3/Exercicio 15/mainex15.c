@@ -25,7 +25,7 @@ void limparBufferEntrada() {
  * 
  */
 int main(int argc, char** argv) {
-    int idade, i, estado_civil, contador = 1, casados, f_sal1500, m_18_35_casado, sexom, sexof, idademaior = 0, idademenor = 150;
+    int idade, estado_civil, contador = 1, f_sal1500, m_18_35_casado, idademaior = 0, idademenor = 150;
     char sexo;
     double salario, contador_salario, contador_salariofinal;
 
@@ -39,7 +39,6 @@ int main(int argc, char** argv) {
 
         if (idade >= 16 && idade <= 150) {
             printf("Introduziu a idade: %d\n ", idade);
-            //++idade;
         } else if (idade < 0) {
             puts("Introduziu uma idade negativa, o programa ira encerrar ");
             break;
@@ -56,10 +55,8 @@ int main(int argc, char** argv) {
 
         if (sexo == 'M') {
             puts("Introduziu o sexo masculino! ");
-            ++sexom;
         } else if (sexo == 'F') {
             puts("Introduziu o sexo feminino! ");
-            ++sexof;
         } else {
             puts("Introduziu um sexo invalido! ");
             break;
