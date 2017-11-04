@@ -5,8 +5,7 @@
  */
 
 
-int num1, num2, operacao;
-double resultado;
+int num1, num2;
 
 long soma() {
     return num1 + num2;   
