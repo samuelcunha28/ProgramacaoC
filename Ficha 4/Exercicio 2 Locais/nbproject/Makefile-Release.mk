@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/calculadora.o \
 	${OBJECTDIR}/fp04_ex02_variaveis_locais.o \
 	${OBJECTDIR}/mytool.o
 
@@ -62,6 +63,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercicio_2_locais.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercicio_2_locais ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/calculadora.o: calculadora.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/calculadora.o calculadora.c
 
 ${OBJECTDIR}/fp04_ex02_variaveis_locais.o: fp04_ex02_variaveis_locais.c
 	${MKDIR} -p ${OBJECTDIR}

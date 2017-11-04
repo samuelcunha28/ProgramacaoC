@@ -19,22 +19,6 @@
  * 
  */
 
-long soma(int num1, int num2) {
-    return num1 + num2;
-}
-
-long subtracao(int num1, int num2) {
-    return num1 - num2;
-}
-
-long multiplicacao(int num1, int num2) {
-    return num1 * num2;
-}
-
-long divisao(int num1, int num2) {
-    return (float) num1 / num2;
-}
-
 int main(int argc, char** argv) {
     int numero1, numero2, operacao;
     double resultado;
