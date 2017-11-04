@@ -5,9 +5,12 @@
  */
 
 // Procedimento para a impressao
+
+#define SIMBOLO "*"
+
 void Impressao(int valor) {
     int i = 0;
     for (i; i < valor; ++i) {
-        printf("*");
+        printf(SIMBOLO);
     }
 }
