@@ -35,7 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/fp04_ex01.o
+	${OBJECTDIR}/fp04_ex01.o \
+	${OBJECTDIR}/impressao.o \
+	${OBJECTDIR}/lerInteiro.o
 
 
 # C Compiler Flags
@@ -66,6 +68,16 @@ ${OBJECTDIR}/fp04_ex01.o: fp04_ex01.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/fp04_ex01.o fp04_ex01.c
+
+${OBJECTDIR}/impressao.o: impressao.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/impressao.o impressao.c
+
+${OBJECTDIR}/lerInteiro.o: lerInteiro.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/lerInteiro.o lerInteiro.c
 
 # Subprojects
 .build-subprojects:

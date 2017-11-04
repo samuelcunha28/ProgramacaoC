@@ -13,25 +13,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "mytools.h"
 
 /*
  * 
  */
-
-// Funcao para a leitura do numero
-int lerInteiro() {
-    int valor;
-    scanf("%d", &valor);
-    return valor;
-}
-
-// Procedimento para a impressao
-void Impressao(int valor) {
-    int i = 0;
-    for (i; i < valor; ++i) {
-        printf("*");
-    }
-}
 
 int main(int argc, char** argv) {
     int num;
