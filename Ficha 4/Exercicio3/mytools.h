@@ -5,20 +5,18 @@
  */
 
 /* 
- * File:   fp04_ex03.c
+ * File:   mytools.h
  * Author: samue
  *
- * Created on 4 de Novembro de 2017, 17:06
+ * Created on 4 de Novembro de 2017, 18:35
  */
 
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef MYTOOLS_H
+#define MYTOOLS_H
 
-/*
- * 
- */
-int main(int argc, char** argv) {
+double lerDouble();
+char lerChar();
+double conversao(double valor, char operacao);
 
-    return (EXIT_SUCCESS);
-}
+#endif /* MYTOOLS_H */
 
