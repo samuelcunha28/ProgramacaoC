@@ -21,22 +21,6 @@
 int num1, num2, operacao;
 double resultado;
 
-long soma() {
-    return num1 + num2;   
-}
-
-long subtracao() {
-    return num1 - num2;
-}
-
-long multiplicacao() {
-    return num1 * num2;
-}
-
-long divisao() {
-    return (float)num1 / num2;
-}
-
 int main(int argc, char** argv) {
     
     puts("Introduza o seu primeiro numero: ");

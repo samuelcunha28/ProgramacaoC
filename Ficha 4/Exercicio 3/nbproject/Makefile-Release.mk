@@ -35,9 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/calculadora.o \
-	${OBJECTDIR}/fp04_ex02_variaveis_globais.o \
-	${OBJECTDIR}/mytool.o
+	${OBJECTDIR}/fp04_ex03.o
 
 
 # C Compiler Flags
@@ -58,26 +56,16 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercicio_2_globais.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercicio_3.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercicio_2_globais.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercicio_3.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercicio_2_globais ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercicio_3 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/calculadora.o: calculadora.c
+${OBJECTDIR}/fp04_ex03.o: fp04_ex03.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/calculadora.o calculadora.c
-
-${OBJECTDIR}/fp04_ex02_variaveis_globais.o: fp04_ex02_variaveis_globais.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/fp04_ex02_variaveis_globais.o fp04_ex02_variaveis_globais.c
-
-${OBJECTDIR}/mytool.o: mytool.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mytool.o mytool.c
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/fp04_ex03.o fp04_ex03.c
 
 # Subprojects
 .build-subprojects:

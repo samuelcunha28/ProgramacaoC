@@ -15,6 +15,10 @@
 #define MYTOOL_H
 
 void limparBufferEntrada();
+long soma(); 
+long subtracao();
+long multiplicacao();
+long divisao();
 
 #endif  /* MYTOOL_H */
 
