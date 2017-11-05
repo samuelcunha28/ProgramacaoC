@@ -8,16 +8,14 @@
  * File:   mytools.h
  * Author: samue
  *
- * Created on 4 de Novembro de 2017, 18:35
+ * Created on 5 de Novembro de 2017, 16:38
  */
 
 #ifndef MYTOOLS_H
 #define MYTOOLS_H
 
 void limparBufferEntrada();
-double lerDouble();
-char lerChar();
-double conversao(double valor, char operacao);
+void desenhofigura(char letra, int coluna, int linha);
 
 #endif /* MYTOOLS_H */
 
