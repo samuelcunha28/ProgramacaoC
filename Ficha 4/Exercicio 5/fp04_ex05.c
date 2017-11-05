@@ -22,7 +22,7 @@
 int main(int argc, char** argv) {
     int n;
     
-    printf("Insira um valor para o qual deseja calcular seu fatorial: ");
+    printf("Qual o fatorial que deseja calcular? ");
     scanf("%d", &n);
 
     fatorial(n);
