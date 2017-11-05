@@ -24,10 +24,10 @@ int main(int argc, char** argv) {
    
     limparBufferEntrada();
     
-    printf("Introduza o nr de linhas: ");
+    printf("Insira o numero de linhas que pretende imprimir: ");
     scanf("%d", &linha);
     
-    printf("Introduza o nr de colunas: ");
+    printf("Insira o numero de colunas que pretende imprimir: ");
     scanf("%d", &coluna);
 
     desenhofigura(letra, linha, coluna);
