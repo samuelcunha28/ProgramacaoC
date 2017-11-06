@@ -13,11 +13,16 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "mytools.h"
 
-/*
- * 
- */
+
 int main(int argc, char** argv) {
+    int num, min = 1, max = 50;
+
+    
+    num = lerInteiro(min, max);
+    Impressao(num);
+
 
     return (EXIT_SUCCESS);
 }

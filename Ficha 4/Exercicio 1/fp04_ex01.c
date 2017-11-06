@@ -22,7 +22,6 @@
 int main(int argc, char** argv) {
     int num;
 
-    puts("Introduza o numero de asteriscos que pretende imprimir: ");
     num = lerInteiro();
     Impressao(num);
 

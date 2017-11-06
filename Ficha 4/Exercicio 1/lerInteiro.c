@@ -7,6 +7,8 @@
 // Funcao para a leitura do numero
 int lerInteiro() {
     int valor;
+    
+    puts("Introduza o numero de asteriscos que pretende imprimir: ");
     scanf("%d", &valor);
     return valor;
 }
