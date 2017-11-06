@@ -5,23 +5,32 @@
  */
 
 /* 
- * File:   fp04_ex07.c
+ * File:   fp04_ex08.c
  * Author: samue
  *
- * Created on 5 de Novembro de 2017, 17:04
+ * Created on 6 de Novembro de 2017, 19:00
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "mytools.h"
 
+#define alunos 10
+
+/*
+ * 
+ */
 
 int main(int argc, char** argv) {
-    int num, min = 1, max = 50;
+    int min = 0, max = 20, i, notas;
+    
+    printf("Voce ira ler %d notas\n", alunos);
 
-    num = lerInteiro(min, max);
-    Impressao(num);
+    for (i = 0; i < alunos; ++i) {
+        notas = lerNotas(min, max);
+    }
 
     return (EXIT_SUCCESS);
 }
+
 
