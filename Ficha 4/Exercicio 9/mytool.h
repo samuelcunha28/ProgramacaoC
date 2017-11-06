@@ -5,17 +5,16 @@
  */
 
 /* 
- * File:   mytools.h
+ * File:   mytool.h
  * Author: samue
  *
- * Created on 5 de Novembro de 2017, 15:29
+ * Created on 5 de Novembro de 2017, 17:24
  */
 
-#ifndef MYTOOLS_H
-#define MYTOOLS_H
+#ifndef MYTOOL_H
+#define MYTOOL_H
 
-int lerNotas(int n);
-int fazerMedia(int n, int somatorio);
+int intervalo(int valor);
 
-#endif /* MYTOOLS_H */
+#endif /* MYTOOL_H */
 

@@ -31,9 +31,9 @@ double lerDouble() {
 
 char lerChar() {
     puts("Qual a operacao que pretende fazer? (E para converter de euros para dolares ou D para converter de dolares para euros) ");
+    
     limparBufferEntrada();
     scanf("%c", &moeda);
-
-
+    
     return moeda;
 }
