@@ -7,9 +7,8 @@
 int intervalo(int valor) {
     do {
 
-        printf("Valor: %d", valor);
+        printf("Valor: %d\n", valor);
         valor += 1;
-        puts(" ");
 
-    } while (valor >= 0);
+    } while (valor <= 0);
 }

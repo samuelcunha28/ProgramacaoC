@@ -5,15 +5,15 @@
  */
 
 int lerNotas(int min, int max) {
-    int notas;
+    int notas, somatorio = 0;
 
     while (1) {
-        printf("Introduza a nota do aluno:\n ");
+        puts("Introduza a nota do aluno: ");
         scanf("%d", &notas);
         if (notas >= min & notas <= max) {
             break;
         } else {
-            printf("Nota invalida! ");
+            puts("Nota invalida! ");
         }
     }
     return notas;

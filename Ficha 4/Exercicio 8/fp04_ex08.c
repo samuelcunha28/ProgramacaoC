@@ -22,13 +22,15 @@
  */
 
 int main(int argc, char** argv) {
-    int min = 0, max = 20, i, notas;
+    int min = 0, max = 20, i, notas, somatorio = 0;
     
     printf("Voce ira ler %d notas\n", alunos);
 
     for (i = 0; i < alunos; ++i) {
         notas = lerNotas(min, max);
+        somatorio += notas;
     }
+    printf("Somatorio das notas: %d ", somatorio);
 
     return (EXIT_SUCCESS);
 }
