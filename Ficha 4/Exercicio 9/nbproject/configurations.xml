@@ -14,7 +14,6 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>fp04_ex09.c</itemPath>
-      <itemPath>mytool.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -40,8 +39,6 @@
       </compileType>
       <item path="fp04_ex09.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="mytool.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="mytool.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
@@ -66,8 +63,6 @@
         </asmTool>
       </compileType>
       <item path="fp04_ex09.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="mytool.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="mytool.h" ex="false" tool="3" flavor2="0">
       </item>
