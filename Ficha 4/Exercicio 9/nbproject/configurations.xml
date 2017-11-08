@@ -4,7 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>mytool.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -39,8 +38,6 @@
       </compileType>
       <item path="fp04_ex09.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="mytool.h" ex="false" tool="3" flavor2="0">
-      </item>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
@@ -63,8 +60,6 @@
         </asmTool>
       </compileType>
       <item path="fp04_ex09.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="mytool.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
