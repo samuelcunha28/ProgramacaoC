@@ -5,7 +5,7 @@
  */
 
 int lerNotas(int min, int max) {
-    int notas, somatorio = 0;
+    int notas;
 
     while (1) {
         puts("Introduza a nota do aluno: ");

@@ -30,7 +30,6 @@ int main(int argc, char** argv) {
         notas = lerNotas(min, max);
         somatorio += notas;
     }
-    printf("Somatorio das notas: %d ", somatorio);
 
     return (EXIT_SUCCESS);
 }

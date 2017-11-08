@@ -18,12 +18,17 @@
  * 
  */
 int main(int argc, char** argv) {
-    int valor;
-
-    printf("Introduza um valor: ");
-    scanf("%d", &valor);
-
-    valor = intervalo(valor);
-
+    int num;
+    const  int inical = 0;  
+    
+    printf("Insira o valor ate ao qual seja imprimido: ");
+    scanf("%d", &num);
+    
+    const int final = num;
+    
+    for (inical; final >= (num - final) ; ++num) {
+        printf("Numero: %d\n", num - final);
+    }
+    
     return (EXIT_SUCCESS);
 }
