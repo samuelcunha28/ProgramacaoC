@@ -22,7 +22,6 @@ int main(int argc, char** argv) {
         printf("%d ", arr[i]);
     }
     
-
     return (EXIT_SUCCESS);
 }
 
