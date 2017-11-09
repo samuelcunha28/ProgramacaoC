@@ -19,14 +19,14 @@
 
 /* Ficha 5 Exercicio 2 */ 
 int main(int argc, char** argv) {
-    int i = 0, arr[TAMANHO_ARRAY];
+    int i = 0, array[TAMANHO_ARRAY];
     
     for (i = 0; i < TAMANHO_ARRAY; ++i) {
-        arr[i] = i + INICIO_ARRAY;
+        array[i] = i + INICIO_ARRAY;
     }
     
     for (i = 0; i < TAMANHO_ARRAY; ++i) {
-        printf("%d ", arr[i]);
+        printf("%d ", array[i]);
     }
     
     return (EXIT_SUCCESS);
