@@ -13,22 +13,23 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "mytool.h"
+
+#define inicial 0
+
 /*
  * 
  */
 int main(int argc, char** argv) {
-    int num;
-    const  int inical = 0;  
+    int num = 0;
     
     printf("Insira o valor ate ao qual seja imprimido: ");
     scanf("%d", &num);
     
-    const int final = num;
     
-    for (inical; final >= (num - final) ; ++num) {
-        printf("Numero: %d\n", num - final);
+    if (num > 0) {
+        printf("Numero: %d\n ", num);
+        num += 1;
+        
     }
-    
     return (EXIT_SUCCESS);
 }
