@@ -21,15 +21,14 @@
  */
 int main(int argc, char** argv) {
     int num = 0;
-    
+
     printf("Insira o valor ate ao qual seja imprimido: ");
     scanf("%d", &num);
-    
-    
-    if (num > 0) {
-        printf("Numero: %d\n ", num);
+
+
+    do {
+        printf("%d\n", (num - num) + 1);
         num += 1;
-        
-    }
+    } while (num >= 0 );
     return (EXIT_SUCCESS);
 }

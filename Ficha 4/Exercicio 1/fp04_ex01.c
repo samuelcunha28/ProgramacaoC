@@ -15,9 +15,7 @@
 #include <stdlib.h>
 #include "mytools.h"
 
-/*
- * 
- */
+/* Ficha 4 Exercicio 1 */
 
 int main(int argc, char** argv) {
     int num;

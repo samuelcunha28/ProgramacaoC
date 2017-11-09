@@ -13,15 +13,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "mytools.h"
 
-/*
- * 
- */
+/* Ficha 4 Exercicio 6 */
 int main(int argc, char** argv) {
     char letra;
     int coluna, linha;
 
-    printf("Insira a letra que pretende imprimir / desenhar ");
+    printf("Insira a letra que pretende imprimir / desenhar: ");
     scanf("%c", &letra);
 
     limparBufferEntrada();

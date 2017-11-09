@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   fp04_ex08.c
  * Author: samue
@@ -15,19 +9,20 @@
 #include <stdlib.h>
 #include "mytools.h"
 
-#define alunos 10
+#define ALUNOS 10
+#define MIN 0
+#define MAX 20
 
-/*
- * 
- */
+
+/* Ficha 4 Exercicio 8 */
 
 int main(int argc, char** argv) {
-    int min = 0, max = 20, i, notas, somatorio = 0;
+    int i, notas, somatorio = 0;
     
-    printf("Voce ira ler %d notas\n", alunos);
+    printf("Voce ira ler %d notas\n", ALUNOS);
 
-    for (i = 0; i < alunos; ++i) {
-        notas = lerNotas(min, max);
+    for (i = 0; i < ALUNOS; ++i) {
+        notas = lerNotas(MIN, MAX);
         somatorio += notas;
     }
 

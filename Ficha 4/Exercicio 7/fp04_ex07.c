@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   fp04_ex07.c
  * Author: samue
@@ -15,13 +9,16 @@
 #include <stdlib.h>
 #include "mytools.h"
 
+#define MIN 1
+#define MAX 50
+
+/* Ficha 4 Exercicio 7 */
 
 int main(int argc, char** argv) {
-    int num, min = 1, max = 50;
+    int num;
 
-    num = lerInteiro(min, max);
+    num = lerInteiro(MIN, MAX);
     Impressao(num);
 
     return (EXIT_SUCCESS);
 }
-

@@ -15,9 +15,7 @@
 #include <stdlib.h>
 #include "mytools.h"
 
-/*
- * 
- */
+/* Ficha 4 Exercicio 4 */
 
 int main(int argc, char** argv) {
     int n;
@@ -30,7 +28,6 @@ int main(int argc, char** argv) {
     media = fazerMedia(n, somatorio);
 
     printf("A media das notas e de %.1f ", media);
-
 
     return (EXIT_SUCCESS);
 }
