@@ -16,11 +16,6 @@
 
 #define TAMANHO_ARRAY 10
 
-void limparBufferEntrada() {
-    char ch;
-    while ((ch = getchar()) != '\n' && ch != EOF);
-}
-
 /* Ficha 5 Exercicio 3 */
 
 int main(int argc, char** argv) {
@@ -32,8 +27,7 @@ int main(int argc, char** argv) {
         scanf("%c", &array[i]);
         limparBufferEntrada();
     }
-
-
+    
     puts("Introduza outro caracter para a verificacao: ");
     scanf("%c", &caracter);
     limparBufferEntrada();

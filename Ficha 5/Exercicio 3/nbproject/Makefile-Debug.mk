@@ -35,7 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/fp05_ex03.o
+	${OBJECTDIR}/fp05_ex03.o \
+	${OBJECTDIR}/mytool.o
 
 
 # C Compiler Flags
@@ -66,6 +67,11 @@ ${OBJECTDIR}/fp05_ex03.o: fp05_ex03.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/fp05_ex03.o fp05_ex03.c
+
+${OBJECTDIR}/mytool.o: mytool.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mytool.o mytool.c
 
 # Subprojects
 .build-subprojects:
