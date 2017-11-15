@@ -18,8 +18,8 @@
 
 int main(int argc, char** argv) {
     int i = 0, array[MAX];
-    
-     for (i = 0; i < MAX; ++i) {
+
+    for (i = 0; i < MAX; ++i) {
         array[i] = i;
     }
     //multiplos de 2
@@ -40,8 +40,10 @@ int main(int argc, char** argv) {
     }
     // imprimir array
     for (i = 2; i < MAX; ++i) {
-        printf("%d\n ", array[i]);
+        if (array[i] != 0) {
+            printf("%d\n ", array[i]);
+        }
     }
-    
-return (EXIT_SUCCESS);
+
+    return (EXIT_SUCCESS);
 }
