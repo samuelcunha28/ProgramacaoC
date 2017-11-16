@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   fp05ex07.c
  * Author: samue
@@ -16,6 +10,8 @@
 #include "mytools.h"
 
 #define TAMANHO_ARRAY 10
+
+/* Ficha 5 Exercicio 7 */ 
 
 int main(int argc, char** argv) {
     int arrayA[TAMANHO_ARRAY], arrayB[TAMANHO_ARRAY], arrayC[TAMANHO_ARRAY];

@@ -13,7 +13,7 @@ void imprimirPar(int array[]) {
     puts("Os numeros pares sao: ");
     for (i = 0; i < TAMANHO_ARRAY; ++i) {
         if (array[i] % 2 == 0) {
-            printf(" %d ", array[i]);
+            printf("%d ", array[i]);
         }
     } 
 }
