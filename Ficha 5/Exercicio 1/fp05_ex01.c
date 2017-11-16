@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
     }
     
     for (i = 0; i < TAMANHO_ARRAY; ++i) {
-        printf("%d ", array[i]);
+        printf("Posicao %d: %d\n", i, array[i]);
     }
     
     return (EXIT_SUCCESS);
