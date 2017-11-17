@@ -1,29 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
- * File:   utils.h
- * Author: samue
- *
- * Created on 17 de Novembro de 2017, 14:20
+ * File:   fp06ex01.c
+ * Author: samuel
+ * FICHA 6
+ * Created on 17 de Novembro de 2017, 14:17
  */
 
 #ifndef UTILS_H
 #define UTILS_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-
-
-
-#ifdef __cplusplus
-}
-#endif
+void clean_buffer();
+int lerString(char *string, int max);
 
 #endif /* UTILS_H */
 
