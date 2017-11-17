@@ -1,23 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   fp06ex02.c
- * Author: samue
- *
+ * Author: samuel
+ * FICHA 6
  * Created on 17 de Novembro de 2017, 14:27
  */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include "utils.h"
 
-/*
- * 
- */
+#define MAX_CARACTERES 25
+
+/* EXERCICIO 2 FICHA 6 */
+
 int main(int argc, char** argv) {
+
+    char palavra_frase[MAX_CARACTERES];
+
+    puts("Introduza o seu texto: ");
+
+    lerString(palavra_frase, MAX_CARACTERES);
+
+    printf("%s\n", palavra_frase);
 
     return (EXIT_SUCCESS);
 }
