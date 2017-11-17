@@ -13,6 +13,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>fp06ex01.c</itemPath>
       <itemPath>utils.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -37,6 +38,8 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="fp06ex01.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="utils.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="utils.h" ex="false" tool="3" flavor2="0">
@@ -62,6 +65,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="fp06ex01.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="utils.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="utils.h" ex="false" tool="3" flavor2="0">

@@ -81,34 +81,3 @@ void vetorE(int arrayA[], int arrayB[], int arrayE[]) {
         printf("%d\n ", arrayE[i]);
     }
 }
-
-/*
-void vetorE(int arrayA[], int arrayB[], int arrayE[]) {
-    int i, j, k, contador = 0, contador2 = 0;
-
-    for (i = 0; i < TAMANHO_ARRAY; ++i) {
-        for (j = 0; j < TAMANHO_ARRAY; ++j) {
-            if (arrayA[i] == arrayB[j]) {
-                for (k = i + 1; k < TAMANHO_ARRAY; ++k) {
-                    if (arrayA[i] == arrayA[k]) {
-                        contador += 1;
-                    }
-                }
-
-                for (k = i + 1; k < TAMANHO_ARRAY; ++k) {
-                    if (arrayB[i] == arrayB[k]) {
-                        contador += 1;
-                    }
-                }
-                if (contador == 0) {
-                    arrayE[contador2] = arrayA[i];
-                    contador2 += 1;
-                }
-            }
-        }
-    }
-    for (i = 0; i < contador2; ++i) {
-        printf("Posicao %d: %d\n", i, arrayE[i]);
-    }
-}
- */

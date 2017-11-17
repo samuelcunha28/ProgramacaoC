@@ -5,23 +5,19 @@
  */
 
 /* 
- * File:   fp06ex02.c
+ * File:   ex06ex01.c
  * Author: samue
  *
- * Created on 16 de Novembro de 2017, 14:58
+ * Created on 17 de Novembro de 2017, 14:17
  */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "utils.h"
 
 /*
  * 
  */
 int main(int argc, char** argv) {
-    char palavra [10];
-    
-    
 
     return (EXIT_SUCCESS);
 }
