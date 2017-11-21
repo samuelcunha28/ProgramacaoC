@@ -20,9 +20,7 @@ int main(int argc, char** argv) {
     puts("Insira o seu texto: ");
     lerString(frase_palavra, MAX_CARACTERES);
     
-    puts("Qual o caracter que deseja pesquisar? ");
-    scanf("%c", &caracter);
-    clean_buffer();
+    caracter = lerChar(caracter);
  
     countChar(frase_palavra, caracter);
     
