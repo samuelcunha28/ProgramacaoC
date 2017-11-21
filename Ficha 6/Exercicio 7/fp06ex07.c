@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "utils.h"
+
 #define MAX_CARACTERES 25
 
 /*
@@ -18,7 +19,7 @@ int main(int argc, char** argv) {
     int i, contador = 0;
     
     
-    for (i = 0; i < MAX_CARACTERES; ++i) {
+    for (i = 0; i < MAX_CARACTERES; ++i) {  // por o array todo em "branco" 
         frase_palavra[i] = ' ';
     }
     

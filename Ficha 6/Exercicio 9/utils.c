@@ -4,8 +4,6 @@
 
 #define MAX_CARACTERES 25
 
-/* Exercicio 7 Ficha 6*/
-
 void clean_buffer() {
     char ch;
     while ((ch = getchar()) != '\n' && ch != EOF);
