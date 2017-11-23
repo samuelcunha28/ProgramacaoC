@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>utils.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,7 +13,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.c</itemPath>
+      <itemPath>fp07ex02.c</itemPath>
+      <itemPath>utils.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -36,7 +38,11 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="main.c" ex="false" tool="0" flavor2="0">
+      <item path="fp07ex02.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="utils.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="utils.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -59,7 +65,11 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="main.c" ex="false" tool="0" flavor2="0">
+      <item path="fp07ex02.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="utils.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="utils.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
