@@ -11,9 +11,7 @@
 
 #define MAX_CARACTERES 25
 
-/*
- * 
- */
+/* Exercicio 9 Ficha 6 */
 int main(int argc, char** argv) {
     char frase_palavra[MAX_CARACTERES];
     int i, contador = 0;
