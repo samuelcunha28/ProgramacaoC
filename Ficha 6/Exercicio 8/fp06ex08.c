@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
 
     pos = lastIndex(' ', frase_palavra1, MAX_CARACTERES);
     posfinal = strlen(frase_palavra1);
-
+    
     puts("O seu Nome em formato (apelido, nome sem apelido) ");
     for (i = pos; i < (posfinal); ++i) {
         printf("%c", frase_palavra1[i]);

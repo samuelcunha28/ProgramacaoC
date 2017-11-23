@@ -9,13 +9,13 @@
 #include <stdlib.h>
 #include "utils.h"
 
-#define MAX_CARACTERES 25   
+#define MAX_CARACTERES 25  
 
 /* Exercicio 9 Ficha 6*/
 int main(int argc, char** argv) {
     char frase_palavra1[MAX_CARACTERES];
-    char frase_palavra2[MAX_CARACTERES];
-    char virgula[1] = ",";     
+    char frase_palavra2[MAX_CARACTERES];  
+    char virgula[1] = ",";
    
     puts("Insira o seu primeiro texto: ");
     lerString(frase_palavra1, MAX_CARACTERES);
