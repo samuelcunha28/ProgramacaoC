@@ -9,7 +9,7 @@ void preencherMatriz(int matriz[][COLUNAS]) {
             scanf("%d", &matriz[i][j]);
         }
         puts(" ");
-    } 
+    }
 }
 
 void escreverMatriz(int matriz[][COLUNAS]) {
@@ -18,7 +18,8 @@ void escreverMatriz(int matriz[][COLUNAS]) {
     for (i = 0; i < LINHAS; ++i) {
         for (j = 0; j < COLUNAS; ++j) {
             printf(" %4d ", matriz[i][j]);
-        }  printf("     %.2f ", (float)(matriz[i][1] + matriz[i][2]) / 2);
+        }
+        printf(" %5.2f ", (float) (matriz[i][1] + matriz[i][2]) / 2);
         puts(" ");
-    } 
+    }
 }

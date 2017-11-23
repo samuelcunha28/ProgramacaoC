@@ -15,7 +15,6 @@
 int main(int argc, char** argv) {
     int matriz[LINHAS][COLUNAS];
     int i = 0, j = 0;
-    double media;
     
     preencherMatriz(matriz); // chamar procedimento para preencher a matriz
     escreverMatriz(matriz); // chamar procedimento para escrever a matriz
