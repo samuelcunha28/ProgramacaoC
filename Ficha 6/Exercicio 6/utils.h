@@ -11,6 +11,7 @@
 void clean_buffer();
 int lerChar(char caracter);
 int lerString(char *string, int max);
+void countChar(char array[], char caracter);
 
 #endif /* UTILS_H */
 

@@ -19,7 +19,7 @@ void escreverMatriz(int matriz[][COLUNAS]) {
         for (j = 0; j < COLUNAS; ++j) {
             printf(" %4d ", matriz[i][j]);
         }
-        printf(" %5.2f ", (float) (matriz[i][1] + matriz[i][2]) / 2);
+        printf("     %.2f ", (float) (matriz[i][1] + matriz[i][2]) / 2);
         puts(" ");
     }
 }
