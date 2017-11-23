@@ -12,11 +12,11 @@ void preencherMatriz(int matriz[][COLUNAS]) {
     } 
 }
 
-void escreverMatriz(int mat[][COLUNAS]) {
+void escreverMatriz(int matriz[][COLUNAS]) {
     int i = 0, j = 0;
     for (i = 0; i < LINHAS; ++i) {
         for (j = 0; j < COLUNAS; ++j) {
-            printf(" %d", mat[i][j]);
+            printf(" %d", matriz[i][j]);
         }  
         puts(" ");
     } 
