@@ -15,23 +15,8 @@ int main(int argc, char** argv) {
     int i = 0, j = 0, matriz[TAMANHO][TAMANHO];
     int maior = 0, menor = 0;
 
-    // preencherMatriz(int matriz[TAMANHO][TAMANHO]) {
-    for (i = 0; i < TAMANHO; ++i) {
-        for (j = 0; j < TAMANHO; ++j) {
-            printf("Introduza o seu valor para [%d] [%d]: ", i, j);
-            scanf("%d", &matriz[i][j]);
-        }
-    }
-
-    puts(" ");
-
-    // escreverMatriz(int matriz[]) 
-    for (i = 0; i < TAMANHO; ++i) {
-        for (j = 0; j < TAMANHO; ++j) {
-            printf(" %d", matriz[i][j]);
-        }
-        puts(" ");
-    }
+    preencherMatriz(matriz); // chamar procedimento para preencher a matriz
+    escreverMatriz(matriz); // chamar procedimento para escrever a matriz
 
     maior = matriz[0][0];
     for (i = 0; i < TAMANHO; ++i) {
@@ -41,7 +26,8 @@ int main(int argc, char** argv) {
             }
         }
     }
-    
+
+
     menor = matriz[0][0];
     for (i = 0; i < TAMANHO; ++i) {
         for (j = 0; j < TAMANHO; ++j) {
@@ -50,9 +36,9 @@ int main(int argc, char** argv) {
             }
         }
     }
-    
-    printf("\n\nO maior valor da matriz e %d\n", maior); 
-    printf("O menor valor da matriz e %d\n", menor); 
+
+    printf("\n\nO maior valor da matriz e %d\n", maior);
+    printf("O menor valor da matriz e %d\n", menor);
     return (EXIT_SUCCESS);
 }
 
