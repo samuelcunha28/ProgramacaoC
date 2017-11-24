@@ -10,7 +10,7 @@
 
 #define MAX 10
 
-int num;
+int num, i = 0, j = 0;
 
 int dimensao() {
 
@@ -28,8 +28,6 @@ int dimensao() {
 }
 
 void preencherMatrizA(int matrizA[][num]) {
-    int i = 0, j = 0;
-    int tamanho;
 
     puts("Preencha a Matriz A: ");
     for (i = 0; i < num; ++i) {
@@ -42,8 +40,6 @@ void preencherMatrizA(int matrizA[][num]) {
 }
 
 void escreverMatrizA(int matrizA[][num]) {
-    int i = 0, j = 0;
-    int tamanho;
 
     puts("Matriz A");
     for (i = 0; i < num; ++i) {
@@ -56,8 +52,6 @@ void escreverMatrizA(int matrizA[][num]) {
 }
 
 void preencherMatrizB(int matrizB[][num]) {
-    int i = 0, j = 0;
-    int tamanho;
     
     puts("Preencha a Matriz B: ");
     for (i = 0; i < num; ++i) {
@@ -70,8 +64,6 @@ void preencherMatrizB(int matrizB[][num]) {
 }
 
 void escreverMatrizB(int matrizB[][num]) {
-    int i = 0, j = 0;
-    int tamanho;
 
     puts("Matriz B");
     for (i = 0; i < num; ++i) {
@@ -84,7 +76,6 @@ void escreverMatrizB(int matrizB[][num]) {
 }
 
 void escreverMatrizC(int matrizA[][num], int matrizB[][num]) {
-    int i = 0, j = 0;
     
     puts("Matriz C");
     for (i = 0; i < num; ++i) {
@@ -99,15 +90,14 @@ void escreverMatrizC(int matrizA[][num], int matrizB[][num]) {
 
 /* Exercicio 6 Ficha 7 */
 int main(int argc, char** argv) {
-    int i = 0, j = 0;
     int matriz[num][num];
 
     dimensao(num);
-    preencherMatrizA(matriz); // chamar procedimento para preencher a matriz
+    preencherMatrizA(matriz); // chamar procedimento para preencher a matriz A
     escreverMatrizA(matriz); // chamar procedimento para escrever a matriz A
-    preencherMatrizB(matriz);
-    escreverMatrizB(matriz);
-    escreverMatrizC(matriz, matriz);
+    preencherMatrizB(matriz); // chamar procedimento para preencher a matriz B
+    escreverMatrizB(matriz); // chamar procedimento para escrever a matriz B
+    escreverMatrizC(matriz, matriz); // chamar procedimento para escrever a matriz C resultante da A e B
 
     return (EXIT_SUCCESS);
 }
