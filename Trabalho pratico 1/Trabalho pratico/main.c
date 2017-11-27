@@ -35,15 +35,17 @@ void escolhaToken(char token[ ]) {
 
 void preencherMatriz(char matriz[][TAMANHO]) {
     int i = 0, j = 0;
+    char letra = 'A';
 
     // Preencher as letras na primeira linha 
-    for (i = 0; i < TAMANHO; ++i) {
-        matriz[0][i] = 'A' + i;
+    for (i = 1; i < TAMANHO; ++i) {
+        matriz[0][i] = letra;
+        letra +=1;
     }
 
     // Preencher os numeros na primeira coluna
-    for (i = 0; i < TAMANHO; ++i) {
-        matriz[i][0] = '1' + i;
+    for (i = 1; i < TAMANHO; ++i) {
+        matriz[i][0] = '0' + i;
     }
 
     // Preencher o resto da matriz nos espacos nao ocupados
@@ -76,6 +78,7 @@ int main(int argc, char** argv) {
     escolhaToken(token);
     preencherMatriz(matriz); // chamar procedimento para preencher a matriz
     imprimirMatriz(matriz); // chamar procedimento para escrever a matriz
+    
     return (EXIT_SUCCESS);
 }
 
