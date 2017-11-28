@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define TAMANHO 3
+#define TAMANHO 3 // constante pedida como no enunciado
 
 /* Exercicio 5 Ficha 7 */
 int main(int argc, char** argv) {
