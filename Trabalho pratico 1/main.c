@@ -176,6 +176,8 @@ int Jogadas(char matriz[][TAMANHO], char token[JOGADORES]) {
 int main(int argc, char** argv) {
     char matriz[TAMANHO][TAMANHO];
     char token[JOGADORES];
+    
+    Jogador Jogadores[JOGADORES];
 
     escolhaToken(token);
     preencherMatriz(matriz);

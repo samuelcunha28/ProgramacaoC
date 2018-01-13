@@ -107,7 +107,6 @@ void imprimir_todos_alunos(Alunos aluno[], int contador) {
         printf("Nome do Aluno: %s\n", aluno[i].nome);
         printf("Data de Nascimento do Aluno: %d/%d/%d\n", aluno[i].datanascimento.dia, aluno[i].datanascimento.mes, aluno[i].datanascimento.ano);
     }
-
 }
 
 int main(int argc, char** argv) {
