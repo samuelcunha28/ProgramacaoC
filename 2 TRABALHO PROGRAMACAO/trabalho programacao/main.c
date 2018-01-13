@@ -92,14 +92,14 @@ int verificarJogadas(int matriz[][TAMANHO], char token[], char coluna, int linha
     int ganhar = 0;
     
 
-    //Verifica se a posição é valida na Matriz
+    //Verificacoes
     for (i = 0; i < TAMANHO; ++i) {
         if (coluna == (A + i) && linha > 0 && linha <= TAMANHO || coluna == 90) {
             if (matriz[(linha - 1)][((A + i) - 65)] == ESPACO || coluna == 90) {
                 matriz[(linha - 1)][((A + i) - 65)] = jogador;
-                // Contador para o numero de jogadas realizadas
+                // numero de jogadas realizadas
                 ++numero_jogadas[jogador];
-                // Imprimir a matriz apos cada jogada
+                // Imprimir a matriz 
                 puts("");
                 printMatriz(matriz, token);
                 // Ao fim de cada jogada verificar se o jogador em causa ou atual ganhou
