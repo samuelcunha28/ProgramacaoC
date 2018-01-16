@@ -12,7 +12,8 @@
 #define MAX_JOGADORES 2
 #define TAMANHO 9
 #define ESPACOLIVRE -1
-#define MENSAGEMVITORIA "O jogador %d e o vencedor da partida. Numero de jogadas do jogador: %d\n"
+#define MENSAGEMVITORIA "O jogador %d e o vencedor da partida.\n"
+#define MENSAGEMJOGADAS "O numero de jogadas total foi: %d\n"
 #define FICHEIRO "jogadores.dat"
 
 void printMatriz(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES]) {
@@ -93,17 +94,18 @@ int verificarVencedor(int matriz[][TAMANHO], int jogador) { // funcao para verif
     return 0;
 } // AJUDA: https://stackoverflow.com/questions/15457796/four-in-a-row-logic
 
-int verificarJogadas(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES], char coluna, int linha, int jogador, int numero_jogadas[]) {
+int verificarJogadas(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES], char coluna, int linha, int jogador, int numero_jogadas[MAX_JOGADORES]) {
     int i, j;
     int A = 65;
     int ganhar = 0;
 
     // Desistencia: Verifica logo se algum jogador desiste para nao percorrer as Verificacoes
-    if (coluna == 'Z') {
+    if (coluna == 'Z' || coluna == 90) {
         if (linha == 0) {
             printf("Jogador 1: %s\n", Jogadores[0].nome);
             printf("Jogador 2: %s\n", Jogadores[1].nome);
-            printf(MENSAGEMVITORIA, (abs(jogador - 1) + 1), numero_jogadas[abs(jogador - 1)]);
+            printf(MENSAGEMVITORIA, (abs(jogador - 1) + 1));
+            printf(MENSAGEMJOGADAS, numero_jogadas[abs(jogador - 1)]);
             Jogadores[abs(jogador - 1) + 1].pontos = +3;
             ++Jogadores[abs(jogador - 1) + 1].vitoria;
             return jogador + 2; // Para nao voltar pedir as jogadas novamente porque jogador + 2 > (jogador < 2)
@@ -124,7 +126,8 @@ int verificarJogadas(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES], ch
                 if (ganhar > 0) {
                     printf("Jogador 1: %s\n", Jogadores[0].nome);
                     printf("Jogador 2: %s\n", Jogadores[1].nome);
-                    printf(MENSAGEMVITORIA, jogador + 1, numero_jogadas[jogador]);
+                    printf(MENSAGEMVITORIA, jogador + 1);
+                    printf(MENSAGEMJOGADAS, numero_jogadas[jogador]);
                     Jogadores[jogador].pontos = +3;
                     ++Jogadores[jogador].vitoria;
                     return jogador + 2; // Para nao voltar pedir as jogadas novamente porque jogador + 2 > (jogador < 2)
@@ -144,7 +147,9 @@ void Jogadas(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES]) {
     char coluna;
     int linha;
     int jogador = 0;
-    int numero_jogadas[MAX_JOGADORES] = {0, 0}; // inicialmente cada jogador inicia o seu contador de jogadas em zero
+    int numero_jogadas[MAX_JOGADORES];
+    numero_jogadas[0] = 0; // inicialmente cada jogador inicia o seu contador de jogadas em zero
+    numero_jogadas[1] = 0; // inicialmente cada jogador inicia o seu contador de jogadas em zero
 
     // Ciclo para a realizacao das jogadas
     do {
@@ -171,9 +176,22 @@ void criarMatriz(int matriz[][TAMANHO]) {
     }
 }
 
-int ler_jogador_token(Jogador Jogadores[], int contador) {
+int ler_jogador_token(Jogador Jogadores[MAX_JOGADORES], int contador, int *tamanhoarray) {
     int i;
     Jogador jogador_novo;
+
+    Jogador *ficheiro = NULL;
+
+    puts(" ");
+
+    // Se chegar ao limite de jogadores adicionamos mais uma posicao para o jogador que desejamos inserir
+    if (contador == *tamanhoarray) {
+        printf("O array de jogadores esta cheio. Foi adicionada mais uma posicao para o jogador novo!");
+        ficheiro = (Jogador *) realloc(Jogadores, 1);
+        *tamanhoarray = *tamanhoarray + 1;
+        free(Jogadores);
+        Jogadores = ficheiro;
+    }
 
     puts(" ");
     puts("Introduza o nome do Jogador ");
@@ -366,7 +384,7 @@ int main(int argc, char** argv) {
     char token[MAX_JOGADORES];
     int matriz[TAMANHO][TAMANHO];
     int contador = 0;
-    int opcao;
+    int opcao, tamanho;
 
     Jogador Jogadores[MAX_JOGADORES];
 
@@ -388,7 +406,7 @@ int main(int argc, char** argv) {
         clean_buffer();
         puts("");
         switch (opcao) {
-            case 1: contador = ler_jogador_token(Jogadores, contador);
+            case 1: contador = ler_jogador_token(Jogadores, contador, &tamanho);
                 break;
             case 2: imprimir_todos_jogadores(Jogadores, contador);
                 break;
