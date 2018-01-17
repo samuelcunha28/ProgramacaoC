@@ -16,17 +16,17 @@
 #define MENSAGEMJOGADAS "O numero de jogadas total foi: %d\n"
 #define FICHEIRO "jogadores.dat"
 
-void printMatriz(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES]) {
+void ImprimirMatriz(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES]) {
     int i, j;
-    int abc = 65;
+    int A = 65; // 65 e o valor de A em ASCII
 
     //Imprime a primeira linha com as letras
     printf(" ");
     printf("|");
     for (i = 0; i < TAMANHO; ++i) {
-        printf("%c", abc);
+        printf("%c", A);
         printf("|");
-        ++abc;
+        ++A;
     }
 
     puts(" ");
@@ -99,6 +99,7 @@ int verificarJogadas(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES], in
     int ganhar = 0;
     int A = 65;
 
+
     // Desistencia: Verifica logo se algum jogador desiste para nao percorrer as Verificacoes para menos gastos 
     if (coluna == 'Z' || coluna == 90) {
         if (linha == 0) {
@@ -106,11 +107,19 @@ int verificarJogadas(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES], in
             printf("Jogador 2: %s\n", Jogadores[1].nome);
             printf(MENSAGEMVITORIA, (abs(jogador - 1) + 1));
             printf(MENSAGEMJOGADAS, numero_jogadas[abs(jogador - 1)]);
-            Jogadores[abs(jogador - 1) + 1].pontos = +3; // Acumular mais 3 pontos para o jogador vencedor da partida
+            Jogadores[abs(jogador - 1)].pontos = Jogadores[abs(jogador - 1)].pontos + 3; // Acumular mais 3 pontos para o jogador vencedor da partida
             ++Jogadores[0].jogos; // Acumular um jogo para cada jogador
-            ++Jogadores[1].jogos;
+            ++Jogadores[1].jogos; // Acumular um jogo para cada jogador
             return jogador + 2; // Para nao voltar pedir as jogadas novamente porque jogador + 2 > (jogador < 2)
         }
+    }
+
+    // Em caso de empate
+    if (numero_jogadas[MAX_JOGADORES] == TAMANHO * TAMANHO) { // Numero maximo de jogadas possiveis
+        ++Jogadores[0].jogos; // Acumular um jogo para cada jogador
+        ++Jogadores[1].jogos; // Acumular um jogo para cada jogador
+        ++Jogadores[0].pontos; // Acumular um ponto para cada jogador
+        ++Jogadores[1].pontos; // Acumular um ponto para cada jogador
     }
 
     // Verificacoes: caso nenhum jogador desista percorre as seguintes verificacoes 
@@ -118,7 +127,7 @@ int verificarJogadas(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES], in
         if (coluna == (A + i) && linha > 0 && linha <= TAMANHO) { // se tiver dentro dos parametros possiveis de jogada
             if (matriz[(linha - 1)][((A + i) - A)] == ESPACOLIVRE) { // e se tiver um espaco livre para completar a jogada
                 matriz[(linha - 1)][((A + i) - A)] = jogador; // o jogador pode jogar 
-                printMatriz(matriz, Jogadores);
+                ImprimirMatriz(matriz, Jogadores);
                 // Contador para o numero de jogadas para cada jogador
                 ++numero_jogadas[jogador];
                 puts("");
@@ -129,9 +138,9 @@ int verificarJogadas(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES], in
                     printf("Jogador 2: %s\n", Jogadores[1].nome);
                     printf(MENSAGEMVITORIA, jogador + 1);
                     printf(MENSAGEMJOGADAS, numero_jogadas[jogador]);
-                    Jogadores[jogador].pontos = +3; // Acumular mais 3 pontos para o jogador vencedor da partida
+                    Jogadores[jogador].pontos = Jogadores[jogador].pontos + 3; // Acumular mais 3 pontos para o jogador vencedor da partida
                     ++Jogadores[0].jogos; // Acumular um jogo para cada jogador
-                    ++Jogadores[1].jogos;
+                    ++Jogadores[1].jogos; // Acumular um jogo para cada jogador
                     return jogador + 2; // Para nao voltar pedir as jogadas novamente porque jogador + 2 > (jogador < 2)
                 }
 
@@ -160,14 +169,14 @@ void Jogadas1VS1(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES]) {
     do {
         clean_buffer();
         puts("");
-        printf("Jogador %d introduza a coluna: ", jogador + 1);
+        printf("Jogador %d introduza a coluna (letra): ", jogador + 1);
         scanf("%c", &coluna);
         clean_buffer();
-        printf("Jogador %d introduza a linha: ", jogador + 1);
+        printf("Jogador %d introduza a linha(numero): ", jogador + 1);
         scanf("%d", &linha);
         // Verifica as jogadas e troca para o jogador seguinte
         jogador = verificarJogadas(matriz, Jogadores, jogador, coluna, linha, numero_jogadas); // chama a funcao VerificarJogadas
-    } while (jogador < 2); // ciclo infinito que e quebravel caso se verifique que haja um vencedor nas funcoes de verificar
+    } while (jogador < 2 && numero_jogadas[MAX_JOGADORES]); // ciclo infinito que e quebravel caso se verifique que haja um vencedor nas funcoes de verificar
 }
 
 void criarMatriz(int matriz[][TAMANHO]) {
@@ -215,7 +224,7 @@ int ler_jogador_token(Jogador Jogadores[MAX_JOGADORES], int contador, int *taman
 
 void Jogo1VS1(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES]) {
     criarMatriz(matriz);
-    printMatriz(matriz, Jogadores);
+    ImprimirMatriz(matriz, Jogadores);
     printf("Jogador 1: %s\n", Jogadores[0].nome);
     printf("Jogador 2: %s\n", Jogadores[1].nome);
     Jogadas1VS1(matriz, Jogadores);
@@ -284,7 +293,7 @@ void JogoHumanoVSComputador(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADOR
     lerString(Jogadores[MAX_JOGADORES].nome, MAX_CARACTERES);
 
     printf("O %s ira jogar contra o temivel PC!", Jogadores[MAX_JOGADORES].nome);
-    printMatriz(matriz, Jogadores);
+    ImprimirMatriz(matriz, Jogadores);
     // Ciclo para a realizacao das jogadas
     do {
         clean_buffer();
