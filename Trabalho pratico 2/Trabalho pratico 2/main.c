@@ -96,8 +96,8 @@ int verificarVencedor(int matriz[][TAMANHO], int jogador) { // funcao para verif
 
 int verificarJogadas(int matriz[][TAMANHO], Jogador Jogadores[MAX_JOGADORES], int jogador, char coluna, int linha, int numero_jogadas[MAX_JOGADORES]) {
     int i, j;
-    int A = 65;
     int ganhar = 0;
+    int A = 65;
 
     // Desistencia: Verifica logo se algum jogador desiste para nao percorrer as Verificacoes para menos gastos 
     if (coluna == 'Z' || coluna == 90) {
@@ -181,7 +181,7 @@ void criarMatriz(int matriz[][TAMANHO]) {
     }
 }
 
-int ler_jogador_token(Jogador Jogadores[MAX_JOGADORES], int contador, int *tamanhoarray) {
+int ler_jogador_token(Jogador Jogadores[MAX_JOGADORES], int contador, int *tamanhoarray) { // Funcao que adiciona jogadores
     int i;
     Jogador jogador_novo;
     Jogador *ficheiro = NULL;
@@ -328,8 +328,7 @@ void LerFicheiro(Jogador Jogadores[MAX_JOGADORES]) {
     fclose(ficheiro);
     free(ficheiro);
 
-    puts(" ");
-    printf("Ficheiro lido.");
+    puts("Ficheiro lido.");
     puts(" ");
 }
 
@@ -342,7 +341,7 @@ void GuardarFicheiro(Jogador Jogadores[MAX_JOGADORES], int contador) {
     }
     fclose(ficheiro);
 
-    printf("Ficheiro guardado!");
+    puts("Ficheiro guardado!");
     puts(" ");
 }
 
@@ -401,7 +400,6 @@ int main(int argc, char** argv) {
             case 2: imprimir_todos_jogadores(Jogadores, contador);
                 break;
             case 3: Jogo1VS1(matriz, Jogadores);
-                        GuardarFicheiro(Jogadores, contador);
                 break;
             case 4: JogoHumanoVSComputador(matriz, Jogadores);
                 break;
