@@ -1,7 +1,7 @@
 /* 
  * File: utils.h
  * Author: Samuel Cunha
- *
+ * TRABALHO PRATICO 2
  * Created on 10 de Janeiro de 2018, 19:49
  */
 
@@ -10,10 +10,10 @@
 
 #define MAX_CARACTERES 50
 
-struct Jogadores {
+struct Jogadores { // Estrutura criada para os jogadores
     char nome[MAX_CARACTERES];
     char token;
-    int vitoria;
+    int jogos;
     int pontos;
 };
 
