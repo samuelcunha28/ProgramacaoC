@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=trabalho_pratico_2
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/trabalho_pratico_2
+CND_ARTIFACT_NAME_Debug=trabalho_programacao
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/trabalho_programacao
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=trabalhopratico2.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/trabalhopratico2.tar
+CND_PACKAGE_NAME_Debug=trabalhoprogramacao.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/trabalhoprogramacao.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=trabalho_pratico_2
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/trabalho_pratico_2
+CND_ARTIFACT_NAME_Release=trabalho_programacao
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/trabalho_programacao
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=trabalhopratico2.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/trabalhopratico2.tar
+CND_PACKAGE_NAME_Release=trabalhoprogramacao.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/trabalhoprogramacao.tar
 #
 # include compiler specific variables
 #
