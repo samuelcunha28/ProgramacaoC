@@ -317,7 +317,6 @@ void lerFicheiro(Jogador Jogadores[2]) { // Procedimento onde se le o ficheiro b
     int i = 0;
 
     FILE *ficheiro = fopen(FICHEIRO, "rb");
-
     for (i = 0; i < 2; ++i) {
         fread(&Jogadores[i], sizeof (Jogador), 1, ficheiro);
     }
@@ -327,13 +326,12 @@ void lerFicheiro(Jogador Jogadores[2]) { // Procedimento onde se le o ficheiro b
 }
 
 void guardarFicheiro(Jogador Jogadores[2], int contador) { // Procedimento para guardar os dados existentes no ficheiro
-
     int i;
+    
     for (i = 0; i < 2; ++i) {
         Jogadores[i].jogos = contador;
     }
     FILE *file = fopen(FICHEIRO, "wb");
-
     for (i = 0; i < 2; ++i) {
         fwrite(&Jogadores[i], sizeof (Jogador), 1, file);
     }
