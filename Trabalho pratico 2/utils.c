@@ -115,7 +115,7 @@ void jogadasComputador(int matriz[][TAMANHOMATRIZ], int *linha, char *coluna, in
 
     for (i = 0; i < TAMANHOMATRIZ; ++i) {
         for (j = 0; j < (TAMANHOMATRIZ - 2); ++j) {
-             // COLUNAS
+            // COLUNAS
             if (matriz[i][j] == 0 && matriz[i][j] == matriz[i][j + 1] && matriz[i][j + 2] == ESPACOLIVRE) { // Verifica se tem 2 tokens do jogador adversario em linha e joga imediatamente ao lado
                 *linha = i + 1;
                 *coluna = j + 67;
@@ -142,7 +142,7 @@ void jogadasComputador(int matriz[][TAMANHOMATRIZ], int *linha, char *coluna, in
     for (i = 0; i < TAMANHOMATRIZ; ++i) { // Caso nao se verificar que existem 2 tokens seguidos do adversario o pc vai preenchendo sempre na mesma linha (1) o seu token
         for (j = 0; j < TAMANHOMATRIZ; ++j) {
             if (matriz[i][j] == ESPACOLIVRE) {
-                *linha = i + 1; 
+                *linha = i + 1;
                 *coluna = j + 65;
                 return;
             }
@@ -156,20 +156,20 @@ void dicasJogada(int matriz[][TAMANHOMATRIZ], Jogador Jogadores[2], char token[2
     for (i = 0; i < TAMANHOMATRIZ; ++i) {
         for (j = 0; j < TAMANHOMATRIZ; ++j) {
             // COLUNAS
-            if (matriz[i][j] == 0 && matriz[i][(j + 1)] == 0 && matriz[i][(j + 2)] == ESPACOLIVRE) { // Verifica se tem 2 tokens do jogador adversario em linha e sugere a jogar imediatamente ao lado
-                printf("%s e aconselhado a voce a jogar na posicao %c %d\n", Jogadores[0].nome, (j + 67), (i + 1));
+            if (matriz[i][j] == 0 && matriz[i][(j + 1)] == 0 && matriz[i][j + 2] == 0 && matriz[i][j + 3] == ESPACOLIVRE) { // Verifica se tem 3 tokens do jogador adversario em linha e sugere a jogar imediatamente ao lado
+                printf("%s e aconselhado a voce a jogar na posicao %c %d\n", Jogadores[0].nome, (j + 68), (i + 1));
                 return;
                 // LINHAS 
-            } else if (matriz[i][j] == 0 && matriz[(i + 1)][j] == 0 && matriz[(i + 2)][j] == ESPACOLIVRE) { // Verifica se tem 2 tokens do jogador adversario em linha e sugere a jogar imediatamente a seguir ao token do adversario 
-                printf("%s e aconselhado a voce a jogar na posicao %c %d\n", Jogadores[0].nome, (j + 65), (i + 3));
+            } else if (matriz[i][j] == 0 && matriz[(i + 1)][j] == 0 && matriz[i + 2][j] == 0 && matriz[(i + 3)][j] == ESPACOLIVRE) { // Verifica se tem 3 tokens do jogador adversario em linha e sugere a jogar imediatamente a seguir ao token do adversario 
+                printf("%s e aconselhado a voce a jogar na posicao %c %d\n", Jogadores[0].nome, (j + 65), (i + 4));
                 return;
-                 // DIAGONAIS DA ESQUERDA PARA A DIREITA
-            } else if (matriz[i][j] == 0 && matriz[(i + 1)][(j + 1)] == 0 && matriz[(i + 2)][(j + 2)] == ESPACOLIVRE) { // Verifica se tem 2 tokens do jogador adversario em linha e sugere a jogar imediatamente a seguir ao token do adversario
-                printf("%s e aconselhado a voce a jogar na posicao %c %d\n", Jogadores[0].nome, (j + 67), (i + 3));
+                // DIAGONAIS DA ESQUERDA PARA A DIREITA
+            } else if (matriz[i][j] == 0 && matriz[(i + 1)][(j + 1)] == 0 && matriz[i + 2][j + 2] == 0 && matriz[(i + 3)][(j + 3)] == ESPACOLIVRE) { // Verifica se tem 3 tokens do jogador adversario em linha e sugere a jogar imediatamente a seguir ao token do adversario
+                printf("%s e aconselhado a voce a jogar na posicao %c %d\n", Jogadores[0].nome, (j + 68), (i + 4));
                 return;
-                 // DIAGONAIS DA DIREITA PARA A ESQUERDA
-            } else if (matriz[i][j] == 0 && matriz[(i + 1)][(j - 1)] == 0 && matriz[(i + 2)][(j - 2)] == ESPACOLIVRE) { // Verifica se tem 2 tokens do jogador adversario em linha e sugere a jogar imediatamente a seguir ao token do adversario
-                printf("%s e aconselhado a voce a jogar na posicao %c %d\n", Jogadores[0].nome,(j + 63), (i + 3));
+                // DIAGONAIS DA DIREITA PARA A ESQUERDA
+            } else if (matriz[i][j] == 0 && matriz[(i + 1)][(j - 1)] == 0 && matriz[i + 2][j - 2] == 0 && matriz[(i + 3)][(j - 3)] == ESPACOLIVRE) { // Verifica se tem 3 tokens do jogador adversario em linha e sugere a jogar imediatamente a seguir ao token do adversario
+                printf("%s e aconselhado a voce a jogar na posicao %c %d\n", Jogadores[0].nome, (j + 62), (i + 4));
                 return;
             }
         }
@@ -264,6 +264,7 @@ void pedirJogada(int matriz[][TAMANHOMATRIZ], Jogador Jogadores[2], char token[2
 }
 
 // Escolher os tokens de ambos os jogadores
+
 void escolherTokens(Jogador Jogadores[2], char token[2]) {
     int i;
 
@@ -284,6 +285,7 @@ void escolherTokens(Jogador Jogadores[2], char token[2]) {
 }
 
 // Atraves das estruturas iremos dar nomes aos jogadores
+
 void nomes(Jogador Jogadores[2], int contador, int computador) {
     int i;
 
