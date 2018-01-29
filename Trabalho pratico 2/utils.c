@@ -176,7 +176,7 @@ void dicasJogada(int matriz[][TAMANHOMATRIZ], Jogador Jogadores[2], char token[2
     }
 }
 
-int verificarJogadas(int matriz[][TAMANHOMATRIZ], Jogador Jogadores[2], char token[], int jogador, char coluna, int linha, int numero_jogadas[2]) {
+int verificarJogadas(int matriz[][TAMANHOMATRIZ], Jogador Jogadores[2], char token[2], int jogador, char coluna, int linha, int numero_jogadas[2]) {
     int i, j;
     int ganhar = 0;
     int A = 65;
@@ -264,7 +264,6 @@ void pedirJogada(int matriz[][TAMANHOMATRIZ], Jogador Jogadores[2], char token[2
 }
 
 // Escolher os tokens de ambos os jogadores
-
 void escolherTokens(Jogador Jogadores[2], char token[2]) {
     int i;
 
@@ -281,11 +280,9 @@ void escolherTokens(Jogador Jogadores[2], char token[2]) {
         clean_buffer();
     }
     puts("");
-
 }
 
 // Atraves das estruturas iremos dar nomes aos jogadores
-
 void nomes(Jogador Jogadores[2], int contador, int computador) {
     int i;
 
@@ -324,9 +321,7 @@ void lerFicheiro(Jogador Jogadores[2]) { // Procedimento onde se le o ficheiro b
     for (i = 0; i < 2; ++i) {
         fread(&Jogadores[i], sizeof (Jogador), 1, ficheiro);
     }
-
     fclose(ficheiro);
-
     puts("Ficheiro lido.");
     puts(" ");
 }
@@ -337,18 +332,15 @@ void guardarFicheiro(Jogador Jogadores[2], int contador) { // Procedimento para 
     for (i = 0; i < 2; ++i) {
         Jogadores[i].jogos = contador;
     }
-
     FILE *file = fopen(FICHEIRO, "wb");
 
     for (i = 0; i < 2; ++i) {
         fwrite(&Jogadores[i], sizeof (Jogador), 1, file);
     }
-
     fclose(file);
     puts(" ");
     printf("Ficheiro guardado");
     puts(" ");
-
 }
 
 void estatisticas(Jogador Jogadores[2], int contador) {
@@ -358,7 +350,6 @@ void estatisticas(Jogador Jogadores[2], int contador) {
     for (i = 0; i < 2; ++i) {
         printf("Nome do jogador: %s\n Pontos: %d\n Jogos realizados: %d\n", Jogadores[i].nome, Jogadores[i].pontos, Jogadores[i].jogos);
     }
-
     fclose(ficheiro);
     puts("Estatisticas Lidas!");
     guardarFicheiro(Jogadores, contador);
