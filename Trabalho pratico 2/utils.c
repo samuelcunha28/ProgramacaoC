@@ -110,8 +110,8 @@ int verificarVencedor(int matriz[][TAMANHOMATRIZ], int jogador) { // funcao para
     return 0;
 } // AJUDA: https://stackoverflow.com/questions/15457796/four-in-a-row-logic
 
-void jogadasComputador(int matriz[][TAMANHOMATRIZ], int *linha, char *coluna, int numero_jogadas[2]) {
-    int i, j;
+void jogadasComputador(int matriz[][TAMANHOMATRIZ], int *linha, char *coluna, int numero_jogadas[2]) { // O objetivo e nao deixar o jogador ganhar.
+    int i, j; // Por isso sempre que o jogador tiver dois tokens seguidos o pc ira jogar a frente para este mesmo ter menores probabilidades de criar uma jogada perigosa e ganhar
 
     for (i = 0; i < TAMANHOMATRIZ; ++i) {
         for (j = 0; j < (TAMANHOMATRIZ - 2); ++j) {
@@ -157,19 +157,19 @@ void dicasJogada(int matriz[][TAMANHOMATRIZ], Jogador Jogadores[2], char token[2
         for (j = 0; j < TAMANHOMATRIZ; ++j) {
             // COLUNAS
             if (matriz[i][j] == 0 && matriz[i][(j + 1)] == 0 && matriz[i][j + 2] == 0 && matriz[i][j + 3] == ESPACOLIVRE) { // Verifica se tem 3 tokens do jogador adversario em linha e sugere a jogar imediatamente ao lado
-                printf("%s e aconselhado a voce a jogar na posicao %c %d\n", Jogadores[0].nome, (j + 68), (i + 1));
+                printf("%s para voce ganhar e aconselhado jogar na posicao %c %d\n", Jogadores[0].nome, (j + 68), (i + 1));
                 return;
                 // LINHAS 
             } else if (matriz[i][j] == 0 && matriz[(i + 1)][j] == 0 && matriz[i + 2][j] == 0 && matriz[(i + 3)][j] == ESPACOLIVRE) { // Verifica se tem 3 tokens do jogador adversario em linha e sugere a jogar imediatamente a seguir ao token do adversario 
-                printf("%s e aconselhado a voce a jogar na posicao %c %d\n", Jogadores[0].nome, (j + 65), (i + 4));
+                printf("%s para voce ganhar e aconselhado jogar na posicao %c %d\n", Jogadores[0].nome, (j + 65), (i + 4));
                 return;
                 // DIAGONAIS DA ESQUERDA PARA A DIREITA
             } else if (matriz[i][j] == 0 && matriz[(i + 1)][(j + 1)] == 0 && matriz[i + 2][j + 2] == 0 && matriz[(i + 3)][(j + 3)] == ESPACOLIVRE) { // Verifica se tem 3 tokens do jogador adversario em linha e sugere a jogar imediatamente a seguir ao token do adversario
-                printf("%s e aconselhado a voce a jogar na posicao %c %d\n", Jogadores[0].nome, (j + 68), (i + 4));
+                printf("%s para voce ganhar e aconselhado jogar na posicao %c %d\n", Jogadores[0].nome, (j + 68), (i + 4));
                 return;
                 // DIAGONAIS DA DIREITA PARA A ESQUERDA
             } else if (matriz[i][j] == 0 && matriz[(i + 1)][(j - 1)] == 0 && matriz[i + 2][j - 2] == 0 && matriz[(i + 3)][(j - 3)] == ESPACOLIVRE) { // Verifica se tem 3 tokens do jogador adversario em linha e sugere a jogar imediatamente a seguir ao token do adversario
-                printf("%s e aconselhado a voce a jogar na posicao %c %d\n", Jogadores[0].nome, (j + 62), (i + 4));
+                printf("%s para voce ganhar e aconselhado jogar na posicao %c %d\n", Jogadores[0].nome, (j + 62), (i + 4));
                 return;
             }
         }
